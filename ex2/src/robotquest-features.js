@@ -98,15 +98,59 @@ function turn(robot, step, turns) {
     return turns ;
 }
 
+*/
+function move(robot, maxLineIndex, maxColumnIndex, nbOfMoves)
+{
+    switch(robot.head) {
+
+
+        case("up"):
+            robot.position.line++;
+break;
+        case("right"):
+            robot.position.column++;
+            break;
+        case("down"):
+            robot.position.line--;
+            break;
+        case("left"):
+            robot.position.column--;
+            break;
+    }
+    nbOfMoves+=1;
+
+    return nbOfMoves
+
+
+
+}
+
+
+/*
+function move(robot, maxLineIndex, maxColumnIndex, nbOfMoves)
+{
+    //1
+
+if(robot.head==="up") {
+    robot.position.line +=1;
+}
+//2
+else if(robot.head==="right") {
+    robot.position.column +=1;
+}
+//3
+    else if(robot.head==="down") {
+        robot.position.line -=1;
+    }
+    //4
+    else if(robot.head==="left" ) {
+        robot.position.column -=1;
+    }
+nbOfMoves+=1;
+return nbOfMoves;
+}
 
 */
-
-    function move(robot, maxLineIndex, maxColumnIndex, nbOfMoves) {
-
-        nbOfMoves += 1;
-        return nbOfMoves;
-    }
-
     function updateBoard(board, previousRobotState, currentRobotState) {
         return;
     }
