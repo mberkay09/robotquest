@@ -1,8 +1,10 @@
 module.exports =
-    {turn, move, updateBoard, checkIfFlagReached, cloneRobot};
+    {turn, move, updateBoard, checkIfFlagReached, checkIfWaterReached,checkIfTreeReached,cloneRobot};
 
 const SYMBOLS = {
-    robot: setReverse('R'),
+
+
+    robot : setReverse('R'),
     tree: colorInGreen('T'),
     flag: colorInYellow('F'),
     water: setBlueBg('w')
@@ -72,7 +74,7 @@ function updateBoard(board, previousRobotState, currentRobotState) {
     let currentColumn = currentRobotState.position.column;
 
     board[previousLine][previousColumn] = trailIndicators[previousRobotState.head];
-    board[currentLine][currentColumn] = SYMBOLS.robot;
+    board[currentLine][currentColumn] = SYMBOLS.robot + trailIndicators[currentRobotState.head];
 }
 
 function checkIfFlagReached(robot, board) {
@@ -80,6 +82,16 @@ function checkIfFlagReached(robot, board) {
     let flagReached = cell === SYMBOLS.flag || cell == 'F';
 
     return flagReached;
+}
+function checkIfWaterReached(robot,board) {
+    const cell = board[robot.position.line][robot.position.column];
+    let waterReached = cell === SYMBOLS.water || cell == 'w';
+    return waterReached;
+}
+function checkIfTreeReached(robot,board) {
+    const cell = board[robot.position.line][robot.position.column];
+    let TreeReached = cell === SYMBOLS.tree || cell == 'T';
+    return TreeReached;
 }
 
 // utils
