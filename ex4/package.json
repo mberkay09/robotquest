@@ -1,6 +1,6 @@
 {
   "name": "robotquest-TDD",
-  "version": "2.0.0",
+  "version": "4.0.0",
   "description": "",
   "main": "robotquest.js",
   "scripts": {
@@ -10,11 +10,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "npm": "^6.4.1",
-    "readline-sync": "^1.4.9"
+    "npm": "^6.4.1"
   },
   "devDependencies": {
-    "jest": "^23.6.0",
-    "prompt-sync": "4.1.6"
+    "jest": "^23.6.0"
   }
 }

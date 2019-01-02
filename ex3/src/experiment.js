@@ -71,7 +71,7 @@ if(isWaterReached){
 
 
 function renderBoard(board, flagReached) {
-//    console.clear();
+    console.clear();
     console.log('\n ' + moves + ':');
 
     for (let row = board.length - 1; row >= 0; row--) {
@@ -96,7 +96,9 @@ function applyStep(robot, step, maxLineIndex, maxColumnIndex) {
 
     if (step === 'turn-right' || step === 'turn-left') {
         turns = features.turn(robot, step, turns);
-        return false;
+
+        return true;
+
     }
 
     moves = features.move(robot, maxLineIndex, maxColumnIndex, moves);
