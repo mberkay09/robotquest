@@ -1,4 +1,4 @@
-export {turn, move, updateBoard, checkIfFlagReached, cloneRobot, SYMBOLS};
+export {turn, move, updateBoard, checkIfFlagReached, cloneRobot, SYMBOLS,trailIndicators};
 
 const SYMBOLS = {
     robot: setReverse('R'),
